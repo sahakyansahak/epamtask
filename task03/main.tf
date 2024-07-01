@@ -13,9 +13,6 @@ resource "azurerm_storage_account" "main" {
   location                 = azurerm_resource_group.main.location
   account_tier             = var.account_tier
   account_replication_type = var.account_replication_type
-  tags = {
-    Environment = var.tag_name
-  }
 }
 
 resource "azurerm_virtual_network" "main" {
