@@ -92,6 +92,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
     storage_account_type = var.disk-info[1]
   }
 
+  admin_ssh_key {
+   username = var.admin_username
+   public_key = file("~/.ssh/id_rsa.pub")
+  }
+
   source_image_reference {
     publisher = var.image-info[0]
     offer     = var.image-info[1]
