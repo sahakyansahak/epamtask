@@ -49,65 +49,65 @@ variable "netint_name" {
 variable "vm_name" {
   description = "The name of the virtual machine"
   type        = string
-  default     = "cmtr-b91f6"
+  default     = "cmtr-b91f6bb7-vm"
 }
 
 variable "domain_name_label" {
-  type = string
+  type    = string
   default = "epamtask04"
 }
 
 variable "admin_username" {
-  type = string
+  type    = string
   default = "epamapp"
 }
 
 variable "admin_password" {
-  type = string
+  type    = string
   default = "Epamapptask04."
 }
 
 variable "connection-type" {
-  type = string
+  type    = string
   default = "ssh"
 }
 
 variable "image-info" {
-  type = list(string)
-  default = [ "Canonical", "UbuntuServer", "18.04-LTS", "latest" ]
+  type    = list(string)
+  default = ["Canonical", "UbuntuServer", "18.04-LTS", "latest"]
 }
 
 variable "disk-info" {
-  type = list(string)
-  default = [ "ReadWrite", "Standard_LRS" ]
+  type    = list(string)
+  default = ["ReadWrite", "Standard_LRS"]
 }
 
 variable "vm-size" {
-  type = string
+  type    = string
   default = "Standard_F2s_v2"
 }
 
 variable "pip-all" {
-    type = string
-    default = "Static"
+  type    = string
+  default = "Static"
 }
 
 variable "private-all" {
-  type = string
+  type    = string
   default = "Dynamic"
 }
 
 variable "private-name" {
-  type = string
+  type    = string
   default = "internal"
 }
 
 variable "vnet-add" {
-  type = list(string)
+  type    = list(string)
   default = ["10.0.0.0/16"]
 }
 
 variable "subnet-add" {
-  type = list(string)
+  type    = list(string)
   default = ["10.0.1.0/24"]
 }
