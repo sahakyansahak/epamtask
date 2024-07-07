@@ -48,7 +48,7 @@ resource "azurerm_network_security_rule" "http" {
 resource "azurerm_network_security_rule" "ssh" {
   network_security_group_name = azurerm_network_security_group.nsg.name
   resource_group_name = azurerm_resource_group.rg.name
-  name = "allow-ssh"
+  name = var.nsg_rule_ssh
   priority = 1001
   direction = "Inbound"
   access = "Allow"
