@@ -54,7 +54,8 @@ variable "vm_name" {
 
 variable "domain_name_label" {
   type    = string
-  default = "epamtask04"
+  default = "cmtr-b91f6bb7-nginx"
+
 }
 
 variable "admin_username" {
@@ -63,8 +64,9 @@ variable "admin_username" {
 }
 
 variable "admin_password" {
-  type    = string
-  default = "Epamapptask04."
+  type      = string
+  default   = "Epamapptask04."
+  sensitive = true
 }
 
 variable "connection-type" {
